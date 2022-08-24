@@ -13,8 +13,8 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Sample App"
-include ':app'
-include ':data'
-include ':domain'
-include ':ui'
-include ':model'
+include(":app")
+include(":data")
+include(":domain")
+include(":ui")
+include(":model")
