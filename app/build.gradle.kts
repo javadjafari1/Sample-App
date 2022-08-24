@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "ir.javadjafarii.sampleapp"
-    compileSdk = 32
+    namespace = Deps.Congif.nameSpace
+    compileSdk = Deps.Congif.compileSdk
 
     defaultConfig {
-        applicationId = "ir.javadjafarii.sampleapp"
-        minSdk = 21
-        targetSdk = 32
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Deps.Congif.nameSpace
+        minSdk = Deps.Congif.minSdk
+        targetSdk = Deps.Congif.targetSdk
+        versionCode = Deps.Congif.versionCode
+        versionName = Deps.Congif.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -39,7 +39,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.2.0"
+        kotlinCompilerExtensionVersion = Deps.AndroidX.Compose.composeVersion
     }
     packagingOptions {
         resources {
@@ -50,9 +50,9 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.8.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
-    implementation("androidx.activity:activity-compose:1.5.1")
+    implementation(Deps.AndroidX.core)
+    implementation(Deps.AndroidX.lifecycle)
+    implementation(Deps.AndroidX.activity)
     implementation("androidx.compose.ui:ui:2.1.0")
     implementation("androidx.compose.ui:ui-tooling-preview:2.1.0")
     implementation("androidx.compose.material:material:1.2.1")
