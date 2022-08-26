@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "ir.javadjafarii.commonui"
-    compileSdk = 32
+    compileSdk = Deps.Congif.compileSdk
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 32
+        minSdk = Deps.Congif.minSdk
+        targetSdk = Deps.Congif.targetSdk
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -28,6 +28,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        compose = true
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -35,10 +38,17 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.5.0")
-    implementation("com.google.android.material:material:1.6.1")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    api(Deps.AndroidX.core)
+    api(Deps.AndroidX.Compose.Ui.main)
+    api(Deps.AndroidX.Compose.Ui.toolingPreview)
+    api(Deps.AndroidX.Compose.material)
+    api(Deps.AndroidX.Compose.animation)
+    api(Deps.AndroidX.Compose.fondation)
+    api(Deps.AndroidX.Compose.runtime)
+    debugApi(Deps.AndroidX.Compose.Ui.tooling)
+    debugApi(Deps.AndroidX.Compose.Ui.manifest)
+    testApi(Deps.Test.junit)
+    androidTestApi(Deps.AndroidX.junit)
+    androidTestApi(Deps.AndroidX.espresso)
+    androidTestApi(Deps.AndroidX.Compose.Ui.test)
 }

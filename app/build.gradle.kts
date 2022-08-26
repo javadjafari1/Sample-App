@@ -49,17 +49,12 @@ android {
 }
 
 dependencies {
-
-    implementation(Deps.AndroidX.core)
     implementation(Deps.AndroidX.lifecycle)
     implementation(Deps.AndroidX.activity)
-    implementation("androidx.compose.ui:ui:2.1.0")
-    implementation("androidx.compose.ui:ui-tooling-preview:2.1.0")
-    implementation("androidx.compose.material:material:1.2.1")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:2.1.0")
-    debugImplementation("androidx.compose.ui:ui-tooling:2.1.0")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:2.1.0")
+
+    implementation(project(Deps.Modules.commonUi))
+    implementation(project(Deps.Modules.model))
+    implementation(project(Deps.Modules.ui))
+    implementation(project(Deps.Modules.data))
+    implementation(project(Deps.Modules.domain))
 }
