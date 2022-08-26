@@ -49,6 +49,8 @@ dependencies {
     api(Deps.AndroidX.Compose.fondation)
     api(Deps.AndroidX.Compose.runtime)
     api(Deps.AndroidX.Compose.navigation)
+    api(project(Deps.Modules.domain))
+    api(project(Deps.Modules.model))
 
     debugApi(Deps.AndroidX.Compose.Ui.tooling)
     debugApi(Deps.AndroidX.Compose.Ui.manifest)

@@ -38,4 +38,5 @@ android {
 dependencies {
 
     testImplementation(Deps.Test.junit)
+    api(project(Deps.Modules.model))
 }

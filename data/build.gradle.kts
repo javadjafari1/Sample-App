@@ -36,7 +36,6 @@ android {
 }
 
 dependencies {
-
-    //implementation("androidx.core:core-ktx:1.8.0")
     testImplementation(Deps.Test.junit)
+    api(project(Deps.Modules.model))
 }
