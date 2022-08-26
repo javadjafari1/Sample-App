@@ -51,6 +51,7 @@ android {
 dependencies {
     implementation(Deps.AndroidX.lifecycle)
     implementation(Deps.AndroidX.activity)
+    implementation(Deps.Accompanist.systemUiController)
 
     implementation(project(Deps.Modules.commonUi))
     implementation(project(Deps.Modules.model))

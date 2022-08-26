@@ -31,6 +31,9 @@ android {
     buildFeatures {
         compose = true
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = Deps.AndroidX.Compose.composeVersion
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -45,6 +48,8 @@ dependencies {
     api(Deps.AndroidX.Compose.animation)
     api(Deps.AndroidX.Compose.fondation)
     api(Deps.AndroidX.Compose.runtime)
+    api(Deps.AndroidX.Compose.navigation)
+
     debugApi(Deps.AndroidX.Compose.Ui.tooling)
     debugApi(Deps.AndroidX.Compose.Ui.manifest)
     testApi(Deps.Test.junit)
